@@ -1,2 +1,50 @@
 # Roll-In-Levity
 Game Project for SWE-150
+
+Public Values:
+    Camera:
+        Position:
+            x: -0.85
+            y: 0.025
+            z: 0
+        Rotation:
+            x: 10
+            y: 90
+            z: 0
+        Scale:
+            x: 0.1
+            y: 0.1
+            z: 0.1
+
+
+    Player:
+        Position:
+            x: 0
+            y: -0.5
+            z: 0
+            (Avatar position y: 0.75)
+        Rotation:
+            x: 0
+            y: 0
+            z: 0
+        Scale:
+            x: 0.1
+            y: 0.1
+            z: 0.1
+
+
+    Pipe:
+        Scale: 1
+        Curve Radius: 4
+        Pipe Radius : 1
+        Curve Segment Count: 20
+        Pipe Segment Count: 10
+        Min Curve Radius: 4
+        Max Curve Radius: 20
+        Min Curve Segmant Count: 4
+        Max Curve Segmant Count: 10
+        Ring Distance: 0.75
+
+
+    Pipe System:
+        Pipe Count: 10
