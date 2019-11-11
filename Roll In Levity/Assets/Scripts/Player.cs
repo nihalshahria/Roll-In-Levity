@@ -37,7 +37,8 @@ public class Player : MonoBehaviour
 
         pipeSystem.transform.localRotation =
             Quaternion.Euler(0f, 0f, systemRotation);
-        
+
+        transform.Rotate(new Vector3(0, 0, -200) * 2 * Time.deltaTime);
     }
 
 
