@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -188,11 +188,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951260396}
   m_LocalRotation: {x: 0.06162845, y: 0.70441604, z: -0.06162845, w: 0.70441604}
-  m_LocalPosition: {x: -8.5, y: 6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.85, y: 0.025000036, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.10000002}
   m_Children: []
-  m_Father: {fileID: 1788624245}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 10, y: 90, z: 0}
 --- !u!1 &969308256
 GameObject:
@@ -369,7 +369,7 @@ Transform:
   - {fileID: 1890919224}
   - {fileID: 1160051023}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1677965121
 GameObject:
@@ -403,8 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977dea8e35d95384dbe24c3e81af68fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationVelocity: 180
   pipeSystem: {fileID: 1160051022}
-  velocity: 4
+  velocity: 5
 --- !u!135 &1677965123
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -435,7 +436,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0e04dfea055974c419e60521ac0c821e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -476,7 +477,7 @@ Transform:
   m_Children:
   - {fileID: 1410860658}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1788624244
 GameObject:
@@ -504,8 +505,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 951260399}
+  m_Children: []
   m_Father: {fileID: 1410860658}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -548,7 +548,7 @@ MonoBehaviour:
   maxCurveRadius: 20
   minCurveSegmentCount: 4
   maxCurveSegmentCount: 10
-  ringDistance: 1
+  ringDistance: 0.75
 --- !u!4 &1890919224
 Transform:
   m_ObjectHideFlags: 0
