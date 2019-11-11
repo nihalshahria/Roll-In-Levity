@@ -2,6 +2,8 @@
 Game Project for SWE-150
 
 Public Values:
+
+
     Camera:
         Position:
             x: -0.85
