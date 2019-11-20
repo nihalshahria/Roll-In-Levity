@@ -405,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationVelocity: 180
   pipeSystem: {fileID: 1160051022}
-  velocity: 5
+  velocity: 6
 --- !u!135 &1677965123
 SphereCollider:
   m_ObjectHideFlags: 0
