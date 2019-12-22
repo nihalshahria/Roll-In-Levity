@@ -59,8 +59,9 @@ public class Pipe : MonoBehaviour
     }
 
     private Vector2[] uv;
+    public PipeItemGenerator[] generators;
 
-    public void Generate()
+    public void Generate(bool withItems = true)
     {
         curveRadius = Random.Range(minCurveRadius, maxCurveRadius);
         curveSegmentCount =
@@ -70,6 +71,10 @@ public class Pipe : MonoBehaviour
         SetUV();
         SetTriangles();
         mesh.RecalculateNormals();
+        if (withItems)
+        {
+            generators[Random.Range(0, generators.Length)].GenerateItems(this);
+        }
     }
 
     private void SetUV()
@@ -183,6 +188,14 @@ public class Pipe : MonoBehaviour
         get
         {
             return curveAngle;
+        }
+    }
+
+    public int CurveSegmentCount
+    {
+        get
+        {
+            return curveSegmentCount;
         }
     }
 }
