@@ -11,19 +11,24 @@ public class Player : MonoBehaviour
     private float systemRotation;
     private Transform world, rotater;
     private float worldRotation, avatarRotation;
+    private float radius, horizontal, vertical;
+    public float moveAngle;
     //private Rigidbody rigidbody;
 
     private void Start()
     {
+        transform.position = new Vector3(0, -0.8f, 0);
         world = pipeSystem.transform.parent;
         rotater = transform.GetChild(0);
         currentPipe = pipeSystem.SetupFirstPipe();
         SetupCurrentPipe();
+        velocity = 4;
         //rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
+        velocity = velocity + 0.15f * (Time.deltaTime % 10);
         float delta = velocity * Time.deltaTime;
         distanceTraveled += delta;
         systemRotation += delta * deltaToRotation;
@@ -40,6 +45,26 @@ public class Player : MonoBehaviour
             Quaternion.Euler(0f, 0f, systemRotation);
 
         transform.Rotate(new Vector3(0, 0, -360) * 2 * Time.deltaTime);
+        /*radius = 0.8f;
+        *//*vertical = radius * Mathf.Sin(moveAngle * Mathf.PI / 180);
+        horizontal = radius * Mathf.Cos(moveAngle * Mathf.PI / 180);
+        transform.position += new Vector3(0, vertical, horizontal);*//*
+        
+        if(Input.GetKey("d"))
+        {
+
+            var vector2 = Random.insideUnitCircle.normalized * radius;
+            transform.position += new Vector3(0, vector2.y, vector2.x);
+        }
+        else if(Input.GetKey("a"))
+        {
+            {
+                moveAngle = moveAngle;
+                vertical = radius * Mathf.Sin(moveAngle * Mathf.PI / 180);
+                horizontal = radius * Mathf.Cos(moveAngle * Mathf.PI / 180);
+                transform.position += new Vector3(horizontal, vertical, 0);
+            }
+        }*/
         UpdateAvatarRotation();
     }
 
