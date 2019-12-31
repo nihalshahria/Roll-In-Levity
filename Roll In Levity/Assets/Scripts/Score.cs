@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
     public Text ScoreText;
     private float time;
     private float score = 0.0f;
+    private float v;
     private void Start()
     {
         time = 0;
@@ -14,7 +15,13 @@ public class Score : MonoBehaviour
     }
     void Update()
     {
-        time += Time.deltaTime;
+        GameObject thePlayer = GameObject.Find("Player");
+        Player player = thePlayer.GetComponent<Player>();
+        v = player.velocity;
+        if(v>0)
+        {
+            time += Time.deltaTime;
+        }
         score = Mathf.Round(time);
         ScoreText.text = Mathf.Round(time).ToString(/*"0"*/);
     }

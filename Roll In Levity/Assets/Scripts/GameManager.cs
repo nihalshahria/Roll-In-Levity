@@ -13,17 +13,11 @@ public class GameManager : MonoBehaviour
         if(gamehasEnded == false)
         {
             gamehasEnded = true;
-            //Destroy(Ball.gameObject);
             Debug.Log("GAME OVER");
-            //FindObjectOfType<Player>().velocityChange();
             GameObject thePlayer = GameObject.Find("Player");
             Player player = thePlayer.GetComponent<Player>();
             player.velocity = 0;
-            /*GameObject score = GameObject.Find("Score");
-            Score scoretext = score.GetComponent<Score>();
-            score.scoretext = scoretext;*/
             GameOver.SetActive(true);
-            //Restart();
         }
         
     }

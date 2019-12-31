@@ -21,10 +21,12 @@ public class Player : MonoBehaviour
 
     private float time;
     public float accelaration;
+    public float r;
     //private Rigidbody rigidbody;
 
     private void Start()
     {
+        r = -360;
         time = 0;
         //accelaration = 0;
         transform.position = new Vector3(0, -0.8f, 0);
@@ -55,7 +57,7 @@ public class Player : MonoBehaviour
         pipeSystem.transform.localRotation =
             Quaternion.Euler(0f, 0f, systemRotation);
 
-        transform.Rotate(new Vector3(0, 0, -360) * 2 * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 0, r) * 2 * Time.deltaTime);
         UpdateAvatarRotation();
     }
 
