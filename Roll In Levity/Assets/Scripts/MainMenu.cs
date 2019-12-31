@@ -11,11 +11,11 @@ public class MainMenu : MonoBehaviour
     {
         HighScore.text = "Highscore: " + ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
     }
-    public void PlayGame(/*int sceneIndex*/)
+    public void PlayGame(int sceneIndex)
     {
-        /*sceneIndex = 1;
-        SceneManager.LoadScene(sceneIndex);*/
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        sceneIndex = 1;
+        SceneManager.LoadScene(sceneIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
 
