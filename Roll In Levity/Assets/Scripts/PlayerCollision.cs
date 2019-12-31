@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collisionInfo.collider.tag == "Obstacle")
         {
-            //Debug.Log(collisionInfo.collider.name);
+            Debug.Log(collisionInfo.collider.name);
             FindObjectOfType<GameManager>().EndGame();
         }
     }

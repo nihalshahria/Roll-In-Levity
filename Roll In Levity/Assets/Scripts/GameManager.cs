@@ -6,19 +6,26 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     bool gamehasEnded = false;
-
+    public GameObject GameOver;
+    public Player player;
    public void EndGame()
     {
         if(gamehasEnded == false)
         {
             gamehasEnded = true;
+            //Destroy(Ball.gameObject);
             Debug.Log("GAME OVER");
-            Restart();
+            //FindObjectOfType<Player>().velocityChange();
+            GameObject thePlayer = GameObject.Find("Player");
+            Player player = thePlayer.GetComponent<Player>();
+            player.velocity = 0;
+            GameOver.SetActive(true);
+            //Restart();
         }
         
     }
-    void Restart()
+    /*void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    }*/
 }
