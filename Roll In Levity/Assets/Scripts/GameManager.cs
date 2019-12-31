@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
             GameObject thePlayer = GameObject.Find("Player");
             Player player = thePlayer.GetComponent<Player>();
             player.velocity = 0;
+            /*GameObject score = GameObject.Find("Score");
+            Score scoretext = score.GetComponent<Score>();
+            score.scoretext = scoretext;*/
             GameOver.SetActive(true);
             //Restart();
         }

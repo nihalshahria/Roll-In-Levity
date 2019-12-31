@@ -11,7 +11,9 @@ public class PlayerCollision : MonoBehaviour
         if(collisionInfo.collider.tag == "Obstacle")
         {
             Debug.Log(collisionInfo.collider.name);
+            FindObjectOfType<Score>().OnDeath();
             FindObjectOfType<GameManager>().EndGame();
+            
         }
     }
 }
