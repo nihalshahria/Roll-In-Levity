@@ -8,10 +8,9 @@ public class GameManager : MonoBehaviour
     bool gamehasEnded = false;
     public GameObject GameOver;
     public Player player;
-   public void EndGame()
+    public void EndGame()
     {
-        if(gamehasEnded == false)
-        {
+        if(gamehasEnded == false){
             gamehasEnded = true;
             Debug.Log("GAME OVER");
             GameObject thePlayer = GameObject.Find("Player");
@@ -21,8 +20,4 @@ public class GameManager : MonoBehaviour
         }
         
     }
-    /*void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }*/
 }

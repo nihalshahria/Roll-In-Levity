@@ -9,27 +9,22 @@ public class PauseMenu : MonoBehaviour
 
     public Player player;
     private bool GameIsPaused = false;
-
     public GameObject Pausemenu;
-    private void Update()
-    {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+    private void Update(){
+
+        if (Input.GetKeyDown(KeyCode.Escape)){
             Debug.Log("pause");
-            if (GameIsPaused)
-            {
+            if (GameIsPaused){
                 Resume();
             }
-            else
-            {
+            else{
                 Pause();
             }
         }
     }
 
-    public void Resume()
-    {
+    public void Resume(){
         Pausemenu.SetActive(false);
         GameObject thePlayer = GameObject.Find("Player");
         Player player = thePlayer.GetComponent<Player>();
@@ -38,8 +33,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    public void Pause()
-    {
+    public void Pause(){
         Pausemenu.SetActive(true);
         GameObject thePlayer = GameObject.Find("Player");
         Player player = thePlayer.GetComponent<Player>();
@@ -48,18 +42,15 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void restart()
-    {
+    public void restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void MainMenu()
-    {
+    public void MainMenu(){
         SceneManager.LoadScene("Start Menu", LoadSceneMode.Additive);
     }
 
-    public void QuitGame()
-    {
+    public void QuitGame(){
         Debug.Log("Quit!");
         Application.Quit();
     }

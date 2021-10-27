@@ -6,20 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
-    public void QuitGame()
-    {
+    public void QuitGame(){
         Debug.Log("Quit!");
         Application.Quit();
     }
 
-    public void Retry()
-    {
-        //Application.loadedLevel(Application.loadedLevel);
+    public void Retry(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void MainMenu()
-    {
+    public void MainMenu(){
         SceneManager.LoadScene("Start Menu", LoadSceneMode.Additive);
     }
 }
